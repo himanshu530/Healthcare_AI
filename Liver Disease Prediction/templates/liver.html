@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Liver Disease Predictor</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/util2.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/main2.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="{{url_for('static',filename='images/image1.jpg')}}" alt="IMG">
+			</div>
+
+			<form class="contact1-form validate-form" action="/predict" method="POST">
+				<span class="contact1-form-title">
+					Liver Disease Predictor
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate = "Name is required">
+					<label for="Total Bilirubin">Total Bilirubin</label>
+					<input class="input1" type="number" id="Total Bilirubin" name="Total Bilirubin"
+					required="required" placeholder="Enter Total Bilirubin">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" >
+					<label for="Total Bilirubin">Direct Bilirubin</label>
+					<input class="input1" type="number" id="Direct Bilirubin" name="Direct Bilirubin"
+					required="required" placeholder="Enter Direct Bilirubin">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<label for="Total Bilirubin">Alkaline Phosphotase</label>
+					<input class="input1" type="number" id="Alkaline Phosphotase" name="Alkaline Phosphotase"
+					required="required" placeholder="Enter Alkaline Phosphotase">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<label for="Total Bilirubin">Alamine Aminotransferase</label>
+					<input class="input1" type="number" id="Alamine Aminotransferase" name="Alamine Aminotransferase"
+					required="required" placeholder="Enter Alamine Aminotransferase">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<label for="Aspartate Aminotransferase">Aspartate Aminotransferase</label>
+					<input class="input1" type="number" id="Aspartate Aminotransferase" name="Aspartate_Aminotransferase"
+					required="required" placeholder="Enter Aspartate Aminotransferase">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<label for="Total Bilirubin">Total Proteins</label>
+					<input class="input1" type="number" id="Total Proteins" name="Total Proteins"
+					required="required" placeholder="Enter Total Proteins">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<label for="Total Bilirubin">Albumin</label>
+					<input class="input1" type="number" id="Albumin" name="Albumin"
+					required="required" placeholder="Enter Albumin">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<label for="Total Bilirubin">Albumin and Globulin Ratio</label>
+					<input class="input1" type="number" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio"
+					required="required" placeholder="Enter Albumin and Globulin Ratio">
+					<span class="shadow-input1"></span>
+				</div>
+
+
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Predict
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='vendor/select2/select2.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='vendor/tilt/tilt.jquery.min.js')}}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+	<script src="{{url_for('static',filename='js/main.js')}}"></script>
+
+</body>
+</html>
